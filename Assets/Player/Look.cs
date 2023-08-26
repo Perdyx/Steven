@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FirstPersonCameraController : MonoBehaviour
+public class Look : MonoBehaviour
 {
     [Header("Camera Settings")]
     public float mouseSensitivity = 50.0f;
