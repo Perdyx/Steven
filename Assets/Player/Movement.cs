@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float maxSpeed = 5f; // Maximum speed when stick is fully tilted
-    public float smoothTime = 0.3f;
+    public float maxSpeed = 3f; // Maximum speed when stick is fully tilted
+    public float smoothTime = 0.1f;
 
     private Vector2 moveInput;
     private Vector3 currentVelocity;
@@ -40,7 +40,9 @@ public class Movement : MonoBehaviour
         // Calculate the desired speed based on the magnitude of the stick input
         float desiredSpeed = moveInput.magnitude * maxSpeed;
 
-        Vector3 targetMoveDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized * desiredSpeed;
+        // Convert the moveInput into the local coordinate space
+        Vector3 localMoveDirection = (transform.forward * moveInput.y) + (transform.right * moveInput.x);
+        Vector3 targetMoveDirection = localMoveDirection.normalized * desiredSpeed;
         Vector3 smoothedMoveDirection = Vector3.SmoothDamp(rb.velocity, targetMoveDirection, ref currentVelocity, smoothTime);
 
         // Calculate new position
