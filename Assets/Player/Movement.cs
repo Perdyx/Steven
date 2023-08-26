@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MovementController : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float maxSpeed = 5f; // Maximum speed when stick is fully tilted

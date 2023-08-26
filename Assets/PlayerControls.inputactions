@@ -1,5 +1,5 @@
 {
-    "name": "Controls",
+    "name": "PlayerControls",
     "maps": [
         {
             "name": "Player",
@@ -9,6 +9,15 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "aa325b04-ac4b-4e40-946e-86c9283b157e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "5095c63f-56eb-4dc6-8e3f-d01854b4fcd9",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -79,6 +88,28 @@
                     "processors": "",
                     "groups": "Xbox Controller",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5c2f79b-ac95-486b-acb0-4dda7b4b67d4",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f14fdbe-741b-4f60-bf74-a2bcfce0bb71",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox Controller",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
